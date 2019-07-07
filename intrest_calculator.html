@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Intrest Calculator</title>
+<style>
+body{
+margin:0px;
+padding:0px;
+}
+input{
+    width:280px;
+    height: 40px;
+    margin-top:20px;
+}
+
+</style>
+<script>
+function calc(){
+
+var a1 = Number(document.getElementById("a").value);
+var a2 = Number(document.getElementById("b").value);
+var a3 = Number(document.getElementById("c").value);
+
+var percent = (a2/a1)*100;
+
+var intrest = Math.round((a3*percent)/100);
+
+
+//alert(intrest);
+
+document.getElementById("result").innerHTML= percent+" of "+a1 +" = "+a2 +"<br> then<br>"+ percent + " of "+ a3 +" = <span style='color:blue;'>"+intrest+"</span>";
+
+
+}//end of function
+</script>
+</head>
+<body>
+<center style="margin-top: 40px;">
+
+    <form action="#" method="post" >
+
+        <input type="text" placeholder="Enter the principle amount" id="a" required/> of X% = <input type="text" placeholder="Enter the intrest amount" id="b" required/>
+        <br>
+        <input type="text" placeholder="Enter the principle amount for intrest amount" id="c" required/>
+        <br>
+        <input type="button" value="submit" onclick="calc()"/>
+
+    </form>
+
+
+<h3 id="result">
+
+</h3>
+
+</center>
+</body>
+</html>
